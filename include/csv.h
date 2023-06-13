@@ -10,16 +10,16 @@
 
     #include <stdio.h>
 
-typedef struct csv_s {
+typedef struct klines_s {
     char *name;
     int size;
     double *data;
-} csv_t;
+} klines_t;
 
 int file_size(char *file_name);
-csv_t **open_csv(char *file_name);
-csv_t **get_columns(char *file_name, int size);
-csv_t **init_csv(char **columns, int size, int nb_tokens);
-void read_csv_line(FILE *file, csv_t **csv, int line);
+klines_t **open_csv(char *file_name);
+klines_t **get_columns(char *file_name, int size);
+klines_t **init_csv(char **columns, int size, int nb_tokens);
+void read_csv_line(FILE *file, klines_t **csv, int line);
 
 #endif

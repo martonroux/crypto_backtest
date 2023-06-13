@@ -39,10 +39,6 @@ typedef struct ema_s {
     double *data;
 } ema_t;
 
-typedef struct cci_s {
-    csv_t **columns;            // TODO: complete data in struct
-} cci_t;
-
 typedef enum indicator_identifier_s {
     NONE = 0,
     RSI_ID = 1,
@@ -58,21 +54,24 @@ typedef struct indicator_s {
     void *data;
 } indicator_t;
 
-
+typedef struct timeframes_s {
+    int timeframe;
+    klines_t **klines;
+} timeframes_t;
 
 /* FUNCTIONS TO GET COLUMNS OF KLINES */
 
-double *get_start(csv_t **klines);
-double *get_close(csv_t **klines);
-double *get_end(csv_t **klines);
-double *get_high(csv_t **klines);
-double *get_low(csv_t **klines);
-double *get_open(csv_t **klines);
-double *get_volume(csv_t **klines);
+double *get_start(klines_t **klines);
+double *get_close(klines_t **klines);
+double *get_end(klines_t **klines);
+double *get_high(klines_t **klines);
+double *get_low(klines_t **klines);
+double *get_open(klines_t **klines);
+double *get_volume(klines_t **klines);
 
 /* FUNCTIONS TO CREATE INDICATORS */
 
 indicator_t *init_indicator(char *name, indicator_identifier_t identifier, int size);
-indicator_t *create_rsi(csv_t **klines, int timeline);
+indicator_t *create_rsi(klines_t **klines, int timeline);
 
 #endif

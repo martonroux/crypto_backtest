@@ -11,6 +11,9 @@
     #define BUY 1
     #define SELL 2
 
+    #include "csv.h"
+    #include "list.h"
+
 extern int act_strategy;
 
 typedef struct position_s {
@@ -24,6 +27,7 @@ typedef struct position_s {
     int strategy_id;
 } position_t;
 
-void replace_sizes(csv_t **klines, list_t *indics, int size);
+void launch_backtest(klines_t **klines, list_t *indics, list_t *strategies);
+void replace_sizes(klines_t **klines, list_t *indics, int size);
 
 #endif
