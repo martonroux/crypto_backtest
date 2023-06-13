@@ -9,7 +9,7 @@
 #include "klines.h"
 #include "my.h"
 
-double *get_open(csv_t **klines)
+double *get_open(klines_t **klines)
 {
     for (int i = 0; klines[i]; i++) {
         if (strcmp(klines[i]->name, OPEN_NAME) == 0) {

@@ -9,7 +9,7 @@
 #include "klines.h"
 #include "my.h"
 
-double *get_low(csv_t **klines)
+double *get_low(klines_t **klines)
 {
     for (int i = 0; klines[i]; i++) {
         if (strcmp(klines[i]->name, LOW_NAME) == 0) {

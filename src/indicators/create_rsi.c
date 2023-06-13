@@ -80,7 +80,7 @@ double *calc_rsi(const double *close, int size, int period)
     return rsi;
 }
 
-indicator_t *create_rsi(csv_t **klines, int timeline)
+indicator_t *create_rsi(klines_t **klines, int timeline)
 {
     printf("Creating RSI data...\n");
     indicator_t *indicator = init_indicator("rsi", RSI_ID, klines[0]->size);

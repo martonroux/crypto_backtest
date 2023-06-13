@@ -8,7 +8,7 @@
 #include "csv.h"
 #include "my.h"
 
-void read_csv_line(FILE *file, csv_t **csv, int line)
+void read_csv_line(FILE *file, klines_t **csv, int line)
 {
     size_t linecapp = 0;
     char *linep = NULL;

@@ -9,7 +9,7 @@
 #include "klines.h"
 #include "my.h"
 
-double *get_volume(csv_t **klines)
+double *get_volume(klines_t **klines)
 {
     for (int i = 0; klines[i]; i++) {
         if (strcmp(klines[i]->name, VOLUME_NAME) == 0) {

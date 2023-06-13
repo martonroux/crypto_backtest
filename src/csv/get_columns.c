@@ -8,7 +8,7 @@
 #include "csv.h"
 #include "my.h"
 
-csv_t **get_columns(char *file_name, int size)
+klines_t **get_columns(char *file_name, int size)
 {
     FILE *file = fopen(file_name, "r");
     char *linep = NULL;

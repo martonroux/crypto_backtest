@@ -8,11 +8,11 @@
 #include "csv.h"
 #include "my.h"
 
-csv_t **open_csv(char *file_name)
+klines_t **open_csv(char *file_name)
 {
     printf("Opening csv file...\n");
     int size = file_size(file_name);
-    csv_t **csv = get_columns(file_name, size - 1);
+    klines_t **csv = get_columns(file_name, size - 1);
     FILE *file = fopen(file_name, "r");
 
     if (file == NULL)
