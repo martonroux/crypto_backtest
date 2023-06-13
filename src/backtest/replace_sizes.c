@@ -9,7 +9,7 @@
 #include "list.h"
 #include "klines.h"
 
-void replace_sizes(csv_t **klines, list_t *indics, int size)
+void replace_sizes(klines_t **klines, list_t *indics, int size)
 {
     node_t *node = indics->first;
     indicator_t *indicator;
