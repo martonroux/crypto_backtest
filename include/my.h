@@ -17,7 +17,7 @@
     #include <stdlib.h>
     #include <string.h>
 
-void print_exit(char *txt);
+void print_exit(const char *str, ...);
 char **split(const char* str, char delim, int* num_tokens);
 void skip_file_line(FILE *file);
 void remove_newline(char *str);
