@@ -23,5 +23,6 @@ strategy_t *init_strategy_2(void)
     strategy->strat_func = &strategy_2;
     strategy->ratio = 0.5;
     strategy->timeframe = 3600;
+    strategy->pair = strdup("BTCUSDT");
     return strategy;
 }

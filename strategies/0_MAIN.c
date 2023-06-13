@@ -23,6 +23,8 @@ void check_strategies(list_t *strategies)
             print_exit("Strategy %s is missing function declaration\n", strategy->name);
         if (strategy->timeframe == 0)
             print_exit("Strategy %s is missing timeframe declaration\n", strategy->name);
+        if (strategy->pair == NULL)
+            print_exit("Strategy %s is missing pair declaration\n", strategy->name);
     }
 }
 

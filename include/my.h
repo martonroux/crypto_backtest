@@ -21,7 +21,7 @@ void print_exit(const char *str, ...);
 char **split(const char* str, char delim, int* num_tokens);
 void skip_file_line(FILE *file);
 void remove_newline(char *str);
-double calc_average(const double *numbers, int size, int start);
+double calc_average(const double *numbers, int size);
 double round_to(double nb, int precision);
 
 #endif
